@@ -51,4 +51,9 @@ for tweet in public_tweets:
 
 
 tweet_df = pd.DataFrame(data)
+
+# if not os.path.isfile("exports/analysis.csv"):
+#     f = open("exports/analysis.csv", "w")
+#     f.close()
+
 tweet_df.to_csv('exports/analysis.csv')

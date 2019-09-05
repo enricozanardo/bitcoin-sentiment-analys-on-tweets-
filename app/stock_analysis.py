@@ -131,6 +131,9 @@ def prediction_data(stock, days):
     mpl.rc('figure', figsize=(8, 7))
     mpl.__version__
 
+    plt.suptitle('Bitcoin Sentiment Analysis on Tweets', fontsize=14, fontweight='bold')
+    plt.ylabel('Sentiment')
+    plt.xlabel('Time')
     # Adjust the style of matplotlib
     style.use(['ggplot'])
     style.context('Solarize_Light2')
@@ -178,43 +181,6 @@ def prediction_data(stock, days):
 
 if __name__ == '__main__':
     stock = 'BTC-USD'
-    days = 1
+    days = 10
 
     prediction_data(stock, days)
-
-# start = datetime.datetime(2019, 1, 1)
-# end = datetime.datetime(2019, 9, 3)
-#
-# df = web.DataReader("BTC-USD", 'yahoo', start, end)
-# print(df.tail())
-#
-# # Determine trend using Moving Average and remove "noises".
-# final_close_price = df['Adj Close']
-# last_days = 20
-# moving_avarage = final_close_price.rolling(window=last_days).mean()
-# # print(moving_avarage)
-#
-# # Adjust the size of mathplotlib
-# mpl.rc('figure', figsize=(8, 7))
-# mpl.__version__
-#
-# # Adjust the style of matplotlib
-# style.use('ggplot')
-#
-# tweet_df = pd.read_csv('analysis.csv')
-# LE = LabelEncoder()
-# tweet_df['code'] = LE.fit_transform(tweet_df['sentiment'])
-# tweet_sentiment_code = tweet_df['code']
-# tweet_date = tweet_df['created_at']
-#
-# print(tweet_df.tail())
-# # tweet_sentiment_code.plot(label='Sentiment')
-# final_close_price.plot(label='BTC-USD')
-# moving_avarage.plot(label='moving average based on last {} days.'.format(last_days))
-#
-# # plt.legend()
-# # plt.show()
-#
-# # Determine Risk and Return
-# rets = final_close_price / final_close_price.shift(1) - 1
-# rets.plot(label = 'return')
