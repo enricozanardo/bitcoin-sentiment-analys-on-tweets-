@@ -19,3 +19,9 @@ TOPIC_NAME = "BTC"
 - Install app dependencies:
 
 ```pip install -r requirements.txt```
+
+
+
+```make install```
+
+```python manage.py runserver```

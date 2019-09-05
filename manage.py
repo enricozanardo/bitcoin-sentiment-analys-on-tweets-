@@ -1,10 +1,17 @@
-from flask import Flask
+from flask_script import Manager, Shell, Server
+from termcolor import colored
 
-app = Flask(__name__)
+from app import app
 
-@app.route("/")
-def home():
-    return "Hello, World!"
+manager = Manager(app)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
+def make_shell_context():
+    return dict(app=app)
+
+
+manager.add_command('runserver', Server())
+manager.add_command('shell', Shell(make_context=make_shell_context))
+
+if __name__ == '__main__':
+    manager.run()

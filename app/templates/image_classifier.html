@@ -1,0 +1,12 @@
+{% extends "base.html" %} {% block content %}
+<input type="file" name="file" id="file" onchange="readURL(this);" class="inputfile" />
+<label class="input_file" for="file">Choose a file</label>
+
+<div id="loader" class="loader" style="display:none;"></div>
+
+<div class="classifier">
+    <img id="loaded_image" class="loaded_image" />
+    <div class="result" id="result"></div>
+</div>
+
+{% endblock %}

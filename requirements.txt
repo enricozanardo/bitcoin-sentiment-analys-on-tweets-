@@ -1,8 +1,9 @@
 flask>=1.1.1
+flask-script>=2.0.6
+termcolor>=1.1.0
 tweepy>=3.8.0
 textblob>=0.15.3
 python-dotenv>=0.10.3
 pandas>=0.24.2
 pandas-datareader>=0.7.4
 matplotlib>=2.2.4
-sklearn>=0.21.3
