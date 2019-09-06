@@ -20,10 +20,10 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 # api = tweepy.API(auth)
 topicname = os.getenv("TOPIC_NAME", "enrico zanardo")
 
-start_date = datetime.datetime(2019, 7, 1, 0, 0, 0)
-end_date = datetime.datetime(2019, 7, 31, 0, 0, 0)
+start_date = datetime.datetime(2019, 9, 3, 0, 0, 0)
+# end_date = datetime.datetime(2019, 9, 3, 0, 0, 0)
 
-public_tweets = tweepy.Cursor(api.search, q=topicname, lang="en", since=start_date, until=end_date).items(180)
+public_tweets = tweepy.Cursor(api.search, q=topicname, lang="en", since=start_date).items(180)
 unwanted_words = ['@', 'RT', ':', 'https', 'http']
 symbols = ['@', '#']
 data = []

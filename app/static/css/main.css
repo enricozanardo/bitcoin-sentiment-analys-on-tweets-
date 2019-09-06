@@ -72,6 +72,17 @@ h3 {
 /*  text-decoration: none;*/
 /*}*/
 
+.tweets {
+  display: flex;
+  justify-content: space-between;
+  color: #090976;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+
+
+
 .loaded_image {
   min-width: 500px;
   max-width: 800px;
@@ -209,4 +220,16 @@ h3 {
 .topnav a.active {
   background-color: #4CAF50;
   color: white;
+}
+
+.prediction {
+  display: flex;
+  display: -webkit-flex;
+  flex-flow: row nowrap;
+  -webkit-flex-flow: row nowrap;
+  align-items: stretch;
+  -webkit-align-items: stretch;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  margin-top: 20px;
 }

@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+
+<div id="loader" class="loader" style="display:none;"></div>
+
+<input type="text" name="days" id="days" onchange="prediction(this);" class="days" />
+<label class="input_days" for="days">Get Prediction</label>
+
+<div id="tweets" class="tweets">
+    <div id="positive" class="positive">positive</div>
+    <div id="neutral" class="neutral">neutral</div>
+    <div id="negative" class="negative">negative</div>
+</div>
+
+<div class="prediction">
+    <img style="display: none;" id="sentiment_image" class="sentiment_image" src="/static/img/sentiment.png" alt="Sentiment Analysis" />
+    <div class="result" id="result">
+        <div class="confidence" id="confidence"></div>
+        <div class="prediction" id="prediction"></div>
+    </div>
+</div>
+
+{% endblock %}
