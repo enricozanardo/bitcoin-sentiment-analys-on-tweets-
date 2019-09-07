@@ -2,6 +2,11 @@
 
 This prototype will allow to make prediction on Bitcoin price based on the sentiment provided by the tweets written time by time.
 
+
+Step 1:
+![twees](tweets.png)
+
+Step2:
 ![Sentiment](sentiment.png)
 
 ### To run the application:
