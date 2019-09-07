@@ -233,3 +233,34 @@ h3 {
   -webkit-justify-content: space-between;
   margin-top: 20px;
 }
+
+.negative_item {
+  color: red;
+}
+
+.positive_item {
+  color: green;
+}
+
+.positive {
+  margin: 5px;
+}
+
+.neutral {
+  margin: 5px;
+}
+
+.negative {
+  margin: 5px;
+}
+
+.confidence {
+  color: #090976;
+  font-size: 20px;
+}
+
+
+.prediction {
+  color: #090976;
+  font-size: 20px;
+}

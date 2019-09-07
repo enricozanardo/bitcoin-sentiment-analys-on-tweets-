@@ -1,9 +1,18 @@
 
+function new_prediction() {
+    $('.days').show();
+    $('.input_days').show();
+    $('.tweets').show();
+    $('.new_prediction').hide();
+    $('.prediction').hide();
+}
+
 function prediction(input) {
     console.log(input.value)
     // Show loading animation
     $('.days').hide();
     $('.input_days').hide();
+    $('.new_prediction').hide();
     $('.prediction').hide();
     $('.tweets').hide();
     $('.loader').show();
@@ -20,13 +29,14 @@ function prediction(input) {
                 $("#confidence").html(parsed_data.result.confidence);
                 // $("#result").html(parsed_data.confidence);
 
-                $('.days').show();
-                $('.input_days').show();
-                $('.tweets').show();
+                // $('.days').show();
+                // $('.input_days').show();
+                // $('.tweets').show();
                 $('.prediction').show();
                 // $('.sentiment_image').style("display: block;")
                 $('.loader').hide();
                 document.getElementById("sentiment_image").style.display = "block";
+                document.getElementById("new_prediction").style.display = "block";
             }
         };
         xhr.open('POST', '/predict', true);

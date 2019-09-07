@@ -37,20 +37,20 @@ def prediction_data(stock, days):
     start/end = historical dataset
     '''
     start = datetime.datetime(2019, 8, 1)
-    end = datetime.datetime(2019, 9, 6)
+    end = datetime.datetime(2019, 9, 7)
 
     # Store in an array the results of the three different classifier
     prediction_values = []
 
     # try to get the data from internet
-    # try:
-    #     stock_df = web.DataReader(stock, 'yahoo', start, end)
-    #     # print(stock_df.tail())
-    #     csv_name = ('{}/{}_export.csv'.format(data_folder, stock))
-    #     stock_df.to_csv(csv_name)
-    #
-    # except ():
-    #     print('it eas not possible to get the data.')
+    try:
+        stock_df = web.DataReader(stock, 'yahoo', start, end)
+        # print(stock_df.tail())
+        csv_name = ('app/exports/BTC-USD_export.csv')
+        stock_df.to_csv(csv_name)
+
+    except ():
+        print('it eas not possible to get the data.')
 
     print(path.exists('app/exports/BTC-USD_export.csv'))
 
@@ -149,6 +149,7 @@ def prediction_data(stock, days):
     print(path.exists('app/exports/analysis_all.csv'))
     tweet_df = pd.read_csv('app/exports/analysis_all.csv')
 
+    tweet_df.drop('remove', axis=1, inplace=True)
     tweet_df['number'] = tweet_df['tweet'].shift()
     tweet_df.dropna(inplace=True)
 

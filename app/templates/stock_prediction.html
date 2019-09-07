@@ -5,10 +5,27 @@
 <input type="text" name="days" id="days" onchange="prediction(this);" class="days" />
 <label class="input_days" for="days">Get Prediction</label>
 
+<button hidden class="new_prediction" id="new_prediction" onclick="new_prediction()">New Prediction</button>
+
 <div id="tweets" class="tweets">
-    <div id="positive" class="positive">positive</div>
-    <div id="neutral" class="neutral">neutral</div>
-    <div id="negative" class="negative">negative</div>
+    <div id="positive" class="positive">
+        <h3>Positive Tweets</h3>
+        {% for item in positive_tweets %}
+            <div class="positive_item">{{ item }}</div>
+        {%endfor%}
+    </div>
+    <div id="neutral" class="neutral">
+        <h3>Neutral Tweets</h3>
+        {% for item in neutral_tweets %}
+            <div class="neutral_item">{{ item }}</div>
+        {%endfor%}
+    </div>
+    <div id="negative" class="negative">
+        <h3>Negative Tweets</h3>
+        {% for item in negative_tweets %}
+            <div class="negative_item">{{ item }}</div>
+        {%endfor%}
+    </div>
 </div>
 
 <div class="prediction">

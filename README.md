@@ -2,6 +2,8 @@
 
 This prototype will allow to make prediction on Bitcoin price based on the sentiment provided by the tweets written time by time.
 
+![Sentiment](sentiment.png)
+
 ### To run the application:
 - Create an application in the Twitter Development Account
 - Create a .env 
@@ -16,12 +18,16 @@ ACCESS_TOKEN_SECRET = "your access token secret"
 
 TOPIC_NAME = "BTC"
 ```
+
+This prototype is working with "static" tweets. That means that is not mandatory to have a
+limited API application in tweeter to use the app ;)
+
 - Install app dependencies:
-
-```pip install -r requirements.txt```
-
-
 
 ```make install```
 
+
+- Run the app
 ```python manage.py runserver```
+
+- Go to Stock
